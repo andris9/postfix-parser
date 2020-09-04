@@ -1,0 +1,17 @@
+{
+    "name": "postfix-parser",
+    "version": "1.0.0",
+    "description": "Parse email messages from Postfix queue files",
+    "main": "lib/postfix-parser.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "postfix"
+    ],
+    "author": "Andris Reinman",
+    "license": "AGPL-3.0-or-later",
+    "devDependencies": {
+        "eslint": "7.8.1"
+    }
+}
