@@ -1,4 +1,4 @@
-# PostfixParser
+# PostfixQueueParser
 
 Parses email message from a Postfix queue file.
 
@@ -9,13 +9,13 @@ Parses email message from a Postfix queue file.
 First install the module from npm:
 
 ```
-$ npm install postfix-parser
+$ npm install postfix-queue-parser
 ```
 
-next import the `postfixParser` generator function into your script:
+next import the `postfixQueueParser` function into your script:
 
 ```js
-const { postfixParser } = require('postfix-parser');
+const { postfixQueueParser } = require('postfix-queue-parser');
 ```
 
 ### MIT version
@@ -25,31 +25,31 @@ MIT-licensed version is available for [Postal Systems subscribers](https://posta
 First install the module from Postal Systems private registry:
 
 ```
-$ npm install @postalsys/postfix-parser
+$ npm install @postalsys/postfix-queue-parser
 ```
 
-next import the `postfixParser` generator function into your script:
+next import the `postfixQueueParser` function into your script:
 
 ```js
-const { postfixParser } = require('@postalsys/postfix-parser');
+const { postfixQueueParser } = require('@postalsys/postfix-queue-parser');
 ```
 
-If you have already built your application using the free version of postfix-parser and do not want to modify require statements in your code, you can install the MIT-licensed version as an alias for "postfix-parser".
+If you have already built your application using the free version of postfix-queue-parser and do not want to modify require statements in your code, you can install the MIT-licensed version as an alias for "postfix-queue-parser".
 
 ```
-$ npm install postfix-parser@npm:@postalsys/postfix-parser
+$ npm install postfix-queue-parser@npm:@postalsys/postfix-queue-parser
 ```
 
 This way you can keep using the old module name
 
 ```js
-const { postfixParser } = require('postfix-parser');
+const { postfixQueueParser } = require('postfix-queue-parser');
 ```
 
 ### Parsing message
 
 ```
-async postfixParser(buffer) -> MessageObject
+async postfixQueueParser(buffer) -> MessageObject
 ```
 
 Where
@@ -72,10 +72,10 @@ Example reads queue file contents from disk and writes email message to console.
 
 ```js
 const { readFile } = require('fs').promises;
-const { postfixParser } = require('postfix-parser');
+const { postfixQueueParser } = require('postfix-queue-parser');
 
 const queueFile = await readFile('A2B13FC0031');
-const message = await postfixParser(queueFile);
+const message = await postfixQueueParser(queueFile);
 
 process.stdout.write(message.content);
 ```
@@ -86,4 +86,4 @@ process.stdout.write(message.content);
 
 Licensed under GNU Affero General Public License v3.0 or later.
 
-MIT-licensed version of postfix-parser is available for [Postal Systems subscribers](https://postalsys.com/).
+MIT-licensed version of postfix-queue-parser is available for [Postal Systems subscribers](https://postalsys.com/).

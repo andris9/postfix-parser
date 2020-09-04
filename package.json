@@ -1,8 +1,8 @@
 {
-    "name": "postfix-parser",
-    "version": "1.0.0",
+    "name": "postfix-queue-parser",
+    "version": "1.0.1",
     "description": "Parse email messages from Postfix queue files",
-    "main": "lib/postfix-parser.js",
+    "main": "lib/postfix-queue-parser.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
